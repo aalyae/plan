@@ -35,6 +35,20 @@ public class HoraireController {
     @Operation(summary = "Lister les horaires")
     public List<Horaire> findAll() { return horaireService.findAll(); }
 
+    @GetMapping("/{id}")
+    @Operation(summary = "Récupérer un horaire")
+    public ResponseEntity<Horaire> get(@PathVariable Long id) {
+        return horaireService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping("/{id}")
+    @Operation(summary = "Mettre à jour un horaire")
+    public Horaire update(@PathVariable Long id, @Validated @RequestBody Horaire h) { return horaireService.update(id, h); }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Supprimer un horaire")
+    public ResponseEntity<Void> delete(@PathVariable Long id) { horaireService.delete(id); return ResponseEntity.noContent().build(); }
+
     @GetMapping("/planning/{collaborateurId}")
     @Operation(summary = "Consulter le planning d'un collaborateur")
     public ResponseEntity<List<Horaire>> planning(

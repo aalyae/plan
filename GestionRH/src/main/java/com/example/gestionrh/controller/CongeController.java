@@ -25,6 +25,18 @@ public class CongeController {
         this.collaborateurService = collaborateurService;
     }
 
+    @GetMapping
+    @Operation(summary = "Lister tous les congés")
+    public List<Conge> findAll() { return congeService.findAll(); }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Récupérer un congé")
+    public ResponseEntity<Conge> get(@PathVariable Long id) { return congeService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build()); }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Supprimer un congé")
+    public ResponseEntity<Void> delete(@PathVariable Long id) { congeService.delete(id); return ResponseEntity.noContent().build(); }
+
     @PostMapping("/soumettre")
     @Operation(summary = "Soumettre une demande de congé")
     public ResponseEntity<Conge> soumettre(

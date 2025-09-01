@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -56,5 +57,11 @@ public class CongeService {
     }
 
     public void delete(Long id) { congeRepository.deleteById(id); }
+
+    @Transactional(readOnly = true)
+    public List<Conge> findAll() { return congeRepository.findAll(); }
+
+    @Transactional(readOnly = true)
+    public Optional<Conge> findById(Long id) { return congeRepository.findById(id); }
 }
 

@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -23,6 +24,9 @@ public class HoraireService {
 
     @Transactional(readOnly = true)
     public List<Horaire> findAll() { return horaireRepository.findAll(); }
+
+    @Transactional(readOnly = true)
+    public Optional<Horaire> findById(Long id) { return horaireRepository.findById(id); }
 
     @Transactional(readOnly = true)
     public List<Horaire> findByCollaborateur(Collaborateur c) { return horaireRepository.findByCollaborateur(c); }

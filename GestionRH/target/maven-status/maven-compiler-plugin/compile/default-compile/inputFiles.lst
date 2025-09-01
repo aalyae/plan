@@ -1,4 +1,5 @@
 /workspace/GestionRH/src/main/java/com/example/gestionrh/GestionRhApplication.java
+/workspace/GestionRH/src/main/java/com/example/gestionrh/config/DataInitializer.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/config/OpenApiConfig.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/controller/AuthController.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/controller/CollaborateurController.java
@@ -17,6 +18,7 @@
 /workspace/GestionRH/src/main/java/com/example/gestionrh/security/CustomUserDetailsService.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/security/JwtAuthenticationFilter.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/security/JwtUtil.java
+/workspace/GestionRH/src/main/java/com/example/gestionrh/security/PasswordConfig.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/security/SecurityConfig.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/service/CollaborateurService.java
 /workspace/GestionRH/src/main/java/com/example/gestionrh/service/CongeService.java
