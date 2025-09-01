@@ -122,3 +122,4 @@ Hibernate:
 2025-09-01T22:15:39.281Z  INFO 3606 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-09-01T22:15:39.283Z  INFO 3606 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-09-01T22:15:43.046Z  INFO 3606 --- [nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 348 ms
+2025-09-01T22:34:44.706Z  WARN 3606 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m14s359ms799µs34ns).
