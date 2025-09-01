@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestionRH - Frontend</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>GestionRH</h1>
+
+    <section id="login-section">
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <label>Email</label>
+            <input type="email" id="username" placeholder="alice.dupont@example.com" required>
+            <label>Mot de passe</label>
+            <input type="password" id="password" placeholder="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p class="hint">Utilisateurs de démo: alice.dupont@example.com (ADMIN), bob.martin@example.com (COLLABORATEUR). Mot de passe: password</p>
+        <p id="login-error" class="error" hidden></p>
+    </section>
+
+    <section id="actions" hidden>
+        <div class="token">
+            <span>Connecté</span>
+            <button id="logout">Se déconnecter</button>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Disponibilité globale</h3>
+                <button id="btn-dispo">Charger</button>
+                <pre id="dispo-output"></pre>
+            </div>
+            <div class="card">
+                <h3>Docs API</h3>
+                <a href="/swagger-ui.html" target="_blank">Ouvrir Swagger UI</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
+
