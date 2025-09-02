@@ -24,5 +24,7 @@ public class HoraireService {
                 .filter(h -> !h.getDate().isBefore(start) && !h.getDate().isAfter(end))
                 .collect(Collectors.toList());
     }
+
+    public Horaire create(Horaire horaire) { return horaireRepository.save(horaire); }
 }
 

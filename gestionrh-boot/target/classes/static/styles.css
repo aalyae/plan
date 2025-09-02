@@ -8,4 +8,12 @@ button{margin-top:12px;background:var(--primary);color:#fff;border:none;border-r
 .hint{color:var(--muted);font-size:13px} .error{color:var(--error)} .token{display:flex;align-items:center;gap:8px;justify-content:space-between}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px} .card{border:1px solid var(--border);background:#0b1220;border-radius:12px;padding:12px}
 pre{white-space:pre-wrap;background:#0b1220;border:1px solid var(--border);padding:12px;border-radius:8px;max-height:300px;overflow:auto}
+table.table{width:100%;border-collapse:collapse;margin-top:8px}
+table.table th,table.table td{border:1px solid var(--border);padding:8px;text-align:left}
+table.table th{background:#121a2e}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:8px 0}
+.form-row input,.form-row select{width:100%}
+#toast{position:fixed;bottom:16px;right:16px;padding:10px 14px;border-radius:8px;background:#0b1220;border:1px solid var(--border);color:var(--text)}
+.toast.ok{border-color:#16a34a}
+.toast.err{border-color:#ef4444}
 

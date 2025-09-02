@@ -7,14 +7,36 @@
   <link rel="stylesheet" href="/styles.css" />
   <script type="module">
     import { ensureLoggedIn, authFetch, clearToken } from './auth.js';
+    import { renderTable, h, showToast } from './ui.js';
     ensureLoggedIn();
     async function load() {
-      const out = document.querySelector('#list');
-      try { const res = await authFetch('/api/collaborateurs'); out.textContent = JSON.stringify(await res.json(), null, 2); }
-      catch(e){ out.textContent = 'Erreur de chargement'; }
+      const container = document.querySelector('#table');
+      const res = await authFetch('/api/collaborateurs');
+      const data = await res.json();
+      renderTable(container,
+        [
+          { key:'id', label:'ID' },
+          { key:'nom', label:'Nom' },
+          { key:'prenom', label:'Prénom' },
+          { key:'email', label:'Email' },
+          { key:'poste', label:'Poste' },
+          { key:'role', label:'Rôle' }
+        ],
+        data
+      );
+    }
+    async function create(e){
+      e.preventDefault();
+      const form = e.target.closest('form');
+      const body = Object.fromEntries(new FormData(form).entries());
+      const res = await authFetch('/api/collaborateurs', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)
+      });
+      if(res.ok){ showToast('Collaborateur créé'); form.reset(); load(); } else { showToast('Erreur', false); }
     }
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#logout').addEventListener('click', () => { clearToken(); window.location.href = '/index.html'; });
+      document.querySelector('#create').addEventListener('click', create);
       load();
     });
   </script>
@@ -30,8 +52,19 @@
     <button id="logout">Se déconnecter</button>
   </nav>
   <section>
+    <h3>Ajouter</h3>
+    <div class="form-row">
+      <input name="nom" placeholder="Nom" required />
+      <input name="prenom" placeholder="Prénom" required />
+      <input name="email" placeholder="Email" />
+      <input name="poste" placeholder="Poste" required />
+      <select name="role"><option>ADMIN</option><option>COLLABORATEUR</option></select>
+    </div>
+    <button id="create">Créer</button>
+  </section>
+  <section>
     <h3>Liste</h3>
-    <pre id="list"></pre>
+    <div id="table"></div>
   </section>
 </div>
 </body>

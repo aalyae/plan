@@ -7,6 +7,7 @@ com/example/gestionrh/security/CustomUserDetailsService.class
 com/example/gestionrh/service/CongeService.class
 com/example/gestionrh/security/JwtAuthenticationFilter.class
 com/example/gestionrh/model/StatutConge.class
+com/example/gestionrh/controller/HoraireController$CreateHoraireRequest.class
 com/example/gestionrh/security/SecurityConfig.class
 com/example/gestionrh/model/Horaire.class
 com/example/gestionrh/model/Collaborateur$CollaborateurBuilder.class

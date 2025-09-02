@@ -7,14 +7,31 @@
   <link rel="stylesheet" href="/styles.css" />
   <script type="module">
     import { ensureLoggedIn, authFetch, clearToken } from './auth.js';
+    import { renderTable, showToast } from './ui.js';
     ensureLoggedIn();
     async function load() {
-      const out = document.querySelector('#list');
-      try { const res = await authFetch('/api/conges'); out.textContent = JSON.stringify(await res.json(), null, 2); }
-      catch(e){ out.textContent = 'Erreur de chargement'; }
+      const res = await authFetch('/api/conges');
+      const data = await res.json();
+      renderTable(document.querySelector('#table'),
+        [
+          { key:'id', label:'ID' },
+          { key:'collaborateur', label:'Collaborateur', render:r => r.collaborateur?.email || '' },
+          { key:'dateDebut', label:'Début' },
+          { key:'dateFin', label:'Fin' },
+          { key:'type', label:'Type' },
+          { key:'statut', label:'Statut' }
+        ], data);
+    }
+    async function submitDemande(e){
+      e.preventDefault();
+      const f = e.target.closest('form');
+      const params = new URLSearchParams(Object.fromEntries(new FormData(f).entries()));
+      const res = await authFetch(`/api/conges/soumettre?${params.toString()}`, { method:'POST' });
+      if(res.ok){ showToast('Demande soumise'); f.reset(); load(); } else showToast('Erreur', false);
     }
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('#logout').addEventListener('click', () => { clearToken(); window.location.href = '/index.html'; });
+      document.querySelector('#soumettre').addEventListener('click', submitDemande);
       load();
     });
   </script>
@@ -30,8 +47,18 @@
     <button id="logout">Se déconnecter</button>
   </nav>
   <section>
+    <h3>Soumettre une demande</h3>
+    <div class="form-row">
+      <input type="number" name="collaborateurId" placeholder="ID Collaborateur" required />
+      <input type="date" name="dateDebut" required />
+      <input type="date" name="dateFin" required />
+      <select name="type"><option>PAYE</option><option>RTT</option><option>MALADIE</option><option>SANS_SOLDE</option><option>MATERNITE</option><option>PATERNITE</option></select>
+    </div>
+    <button id="soumettre">Soumettre</button>
+  </section>
+  <section>
     <h3>Liste</h3>
-    <pre id="list"></pre>
+    <div id="table"></div>
   </section>
 </div>
 </body>
