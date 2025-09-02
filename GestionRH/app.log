@@ -196,3 +196,4 @@ Hibernate:
         c1_0.collaborateur_id=? 
         and c1_0.date_debut<=? 
         and c1_0.date_fin>=?
+2025-09-02T00:40:07.875Z  WARN 8554 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m18s975ms838µs400ns).
