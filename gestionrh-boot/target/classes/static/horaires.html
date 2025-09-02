@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horaires - GestionRH</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module">
+    import { ensureLoggedIn, authFetch, clearToken } from './auth.js';
+    ensureLoggedIn();
+    async function load() {
+      const out = document.querySelector('#list');
+      try { const res = await authFetch('/api/horaires'); out.textContent = JSON.stringify(await res.json(), null, 2); }
+      catch(e){ out.textContent = 'Erreur de chargement'; }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#logout').addEventListener('click', () => { clearToken(); window.location.href = '/index.html'; });
+      load();
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1>Horaires</h1>
+  <nav class="cards">
+    <a class="card" href="/dashboard.html">Dashboard</a>
+    <a class="card" href="/collaborateurs.html">Collaborateurs</a>
+    <a class="card" href="/conges.html">Congés</a>
+    <a class="card" href="/horaires.html">Horaires</a>
+    <button id="logout">Se déconnecter</button>
+  </nav>
+  <section>
+    <h3>Liste</h3>
+    <pre id="list"></pre>
+  </section>
+</div>
+</body>
+</html>
+

@@ -16,7 +16,11 @@ com/example/gestionrh/repository/HoraireRepository.class
 com/example/gestionrh/model/TypeConge.class
 com/example/gestionrh/GestionRhApplication.class
 com/example/gestionrh/repository/CollaborateurRepository.class
+com/example/gestionrh/controller/CollaborateurController.class
 com/example/gestionrh/model/Horaire$HoraireBuilder.class
+com/example/gestionrh/service/HoraireService.class
+com/example/gestionrh/controller/CongeController.class
+com/example/gestionrh/controller/HoraireController.class
 com/example/gestionrh/security/PasswordConfig.class
 com/example/gestionrh/security/JwtUtil.class
 com/example/gestionrh/controller/AuthController.class

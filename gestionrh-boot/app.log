@@ -9,24 +9,24 @@ nohup: ignoring input
 
  :: Spring Boot ::                (v3.3.3)
 
-2025-09-02T00:55:40.656Z  INFO 23077 --- [           main] c.e.gestionrh.GestionRhApplication       : Starting GestionRhApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 23077 (/workspace/gestionrh-boot/target/gestionrh-boot-0.0.1-SNAPSHOT.jar started by ubuntu in /workspace/gestionrh-boot)
-2025-09-02T00:55:40.658Z  INFO 23077 --- [           main] c.e.gestionrh.GestionRhApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-09-02T00:55:41.308Z  INFO 23077 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-02T00:55:41.341Z  INFO 23077 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
-2025-09-02T00:55:41.693Z  INFO 23077 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-09-02T00:55:41.703Z  INFO 23077 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-02T00:55:41.703Z  INFO 23077 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2025-09-02T00:55:41.723Z  INFO 23077 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-02T00:55:41.724Z  INFO 23077 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1035 ms
-2025-09-02T00:55:41.746Z  INFO 23077 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-09-02T00:55:41.879Z  INFO 23077 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-09-02T00:55:41.881Z  INFO 23077 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-09-02T00:55:41.889Z  INFO 23077 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-09-02T00:55:41.980Z  INFO 23077 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-02T00:55:42.017Z  INFO 23077 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-09-02T00:55:42.037Z  INFO 23077 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-02T00:55:42.209Z  INFO 23077 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-02T00:55:42.767Z  INFO 23077 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-02T02:03:22.273Z  INFO 26001 --- [           main] c.e.gestionrh.GestionRhApplication       : Starting GestionRhApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 26001 (/workspace/gestionrh-boot/target/gestionrh-boot-0.0.1-SNAPSHOT.jar started by ubuntu in /workspace/gestionrh-boot)
+2025-09-02T02:03:22.274Z  INFO 26001 --- [           main] c.e.gestionrh.GestionRhApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-09-02T02:03:22.943Z  INFO 26001 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-02T02:03:22.979Z  INFO 26001 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2025-09-02T02:03:23.364Z  INFO 26001 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-02T02:03:23.376Z  INFO 26001 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-02T02:03:23.376Z  INFO 26001 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-09-02T02:03:23.399Z  INFO 26001 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-02T02:03:23.400Z  INFO 26001 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1094 ms
+2025-09-02T02:03:23.422Z  INFO 26001 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-02T02:03:23.555Z  INFO 26001 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-09-02T02:03:23.556Z  INFO 26001 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-02T02:03:23.564Z  INFO 26001 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-09-02T02:03:23.669Z  INFO 26001 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-02T02:03:23.700Z  INFO 26001 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-09-02T02:03:23.719Z  INFO 26001 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-02T02:03:23.903Z  INFO 26001 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-02T02:03:24.503Z  INFO 26001 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists collaborateurs cascade 
 Hibernate: 
@@ -72,25 +72,25 @@ Hibernate:
        add constraint FKktbvxkb7rntodu44jif74ncge 
        foreign key (collaborateur_id) 
        references collaborateurs
-2025-09-02T00:55:42.808Z  INFO 23077 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-02T00:55:43.053Z  INFO 23077 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-09-02T00:55:43.054Z  WARN 23077 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2025-09-02T00:55:43.110Z  WARN 23077 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-09-02T00:55:43.158Z  INFO 23077 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-09-02T00:55:43.491Z  WARN 23077 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-09-02T00:55:43.493Z  INFO 23077 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-02T02:03:24.539Z  INFO 26001 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-02T02:03:24.823Z  INFO 26001 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-02T02:03:24.823Z  WARN 26001 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-09-02T02:03:24.887Z  WARN 26001 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-02T02:03:24.934Z  INFO 26001 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-09-02T02:03:25.274Z  WARN 26001 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-02T02:03:25.276Z  INFO 26001 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 Hibernate: 
     drop table if exists collaborateurs cascade 
 Hibernate: 
     drop table if exists conges cascade 
 Hibernate: 
     drop table if exists horaires cascade 
-2025-09-02T00:55:43.496Z  INFO 23077 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-09-02T00:55:43.498Z  INFO 23077 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-09-02T00:55:43.505Z  INFO 23077 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-09-02T02:03:25.279Z  INFO 26001 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-02T02:03:25.280Z  INFO 26001 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-02T02:03:25.287Z  INFO 26001 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-09-02T00:55:43.516Z ERROR 23077 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2025-09-02T02:03:25.295Z ERROR 26001 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START

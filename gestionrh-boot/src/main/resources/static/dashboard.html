@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - GestionRH</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module">
+    import { ensureLoggedIn, authFetch, clearToken } from './auth.js';
+    ensureLoggedIn();
+    window.addEventListener('DOMContentLoaded', async () => {
+      document.querySelector('#logout').addEventListener('click', () => { clearToken(); window.location.href = '/index.html'; });
+      const out = document.querySelector('#dispo-output');
+      try {
+        const res = await authFetch('/api/dashboard/disponibilite');
+        const data = await res.json();
+        out.textContent = JSON.stringify(data, null, 2);
+      } catch (e) { out.textContent = 'Erreur de chargement'; }
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1>Dashboard</h1>
+  <nav class="cards">
+    <a class="card" href="/dashboard.html">Dashboard</a>
+    <a class="card" href="/collaborateurs.html">Collaborateurs</a>
+    <a class="card" href="/conges.html">Congés</a>
+    <a class="card" href="/horaires.html">Horaires</a>
+    <button id="logout">Se déconnecter</button>
+  </nav>
+  <section>
+    <h3>Disponibilité globale</h3>
+    <pre id="dispo-output"></pre>
+  </section>
+</div>
+</body>
+</html>
+

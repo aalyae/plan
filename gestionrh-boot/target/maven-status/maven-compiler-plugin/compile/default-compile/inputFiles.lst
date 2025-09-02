@@ -1,7 +1,10 @@
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/GestionRhApplication.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/config/DataInitializer.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/controller/AuthController.java
+/workspace/gestionrh-boot/src/main/java/com/example/gestionrh/controller/CollaborateurController.java
+/workspace/gestionrh-boot/src/main/java/com/example/gestionrh/controller/CongeController.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/controller/DashboardController.java
+/workspace/gestionrh-boot/src/main/java/com/example/gestionrh/controller/HoraireController.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/model/Collaborateur.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/model/Conge.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/model/Horaire.java
@@ -18,3 +21,4 @@
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/security/SecurityConfig.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/service/CollaborateurService.java
 /workspace/gestionrh-boot/src/main/java/com/example/gestionrh/service/CongeService.java
+/workspace/gestionrh-boot/src/main/java/com/example/gestionrh/service/HoraireService.java

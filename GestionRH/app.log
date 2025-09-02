@@ -199,3 +199,15 @@ Hibernate:
 2025-09-02T00:40:07.875Z  WARN 8554 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m18s975ms838µs400ns).
 2025-09-02T00:55:48.110Z  INFO 8554 --- [nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 504 ms
 2025-09-02T01:56:28.720Z  WARN 8554 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m20s826ms86µs263ns).
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.email,
+        c1_0.nom,
+        c1_0.poste,
+        c1_0.prenom,
+        c1_0.role 
+    from
+        collaborateurs c1_0 
+    where
+        c1_0.email=?
